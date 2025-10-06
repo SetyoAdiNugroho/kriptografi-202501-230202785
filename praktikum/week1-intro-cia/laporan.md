@@ -1,95 +1,119 @@
-# Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+# Laporan Praktikum
+
+# Sejarah Kriptografi
+Sejarah Kriptografi: Dari Pesan Rahasia Kuno hingga Era Digital
+Kriptografi (berasal dari bahasa Yunani kryptos = tersembunyi, dan graphein = tulisan) adalah ilmu dan seni menjaga keamanan pesan. Sejarahnya membentang ribuan tahun, berevolusi dari teknik pena-dan-kertas sederhana menjadi algoritma matematika yang kompleks.
+
+**I. Kriptografi Klasik (Zaman Kuno hingga Abad Pertengahan)**
+Era ini didominasi oleh dua jenis sandi utama: Substitusi (mengganti huruf) dan Transposisi (mengubah urutan huruf).
+
+1. Abad Kuno (Yunani dan Romawi)
+Scytale (Yunani Kuno, sekitar 400 SM): Contoh awal kriptografi Transposisi. Pesan ditulis pada pita yang melilit sebuah tongkat (scytale) dengan diameter tertentu. Pesan hanya dapat dibaca oleh penerima yang memiliki tongkat dengan diameter yang sama.
+
+Caesar Cipher (Romawi Kuno): Dikenalkan oleh Julius Caesar, ini adalah bentuk sederhana dari sandi Substitusi. Setiap huruf pada teks asli diganti dengan huruf lain yang digeser sejumlah posisi tetap (misalnya 3) ke depan dalam urutan alfabet. Meskipun sederhana, teknik ini efektif untuk komunikasi militer pada masanya.
+
+2. Periode Pencerahan Islam (Abad ke-9)
+Penemuan Kriptanalisis: Ilmuwan Arab Abu Yusuf Yaqub Ibnu Ishaq Al-Kindi (Al-Kindi) merupakan tokoh kunci. Ia mengembangkan teknik Analisis Frekuensi, sebuah metode untuk memecahkan sandi substitusi dengan menganalisis frekuensi kemunculan setiap huruf dalam teks tersandi. Penemuan ini secara efektif mengakhiri efektivitas sandi monoalfabetik sederhana.
+
+3. Abad Pertengahan hingga Renaisans
+Vigenère Cipher (Abad ke-16): Sandi yang menggunakan kunci berulang dan dikenal sebagai sandi Polialfabetik (menggunakan banyak cipher Caesar yang berbeda). Sandi ini jauh lebih sulit dipecahkan dengan analisis frekuensi dan sempat dijuluki sebagai "sandi yang tidak dapat dipecahkan" selama ratusan tahun.
+
+**II. Kriptografi Mekanik dan Perang Dunia (Awal Abad ke-20)**
+Perkembangan teknologi mekanik melahirkan mesin-mesin enkripsi yang lebih rumit, meningkatkan keamanan secara eksponensial.
+
+Mesin Rotor (Awal Abad ke-20): Mesin seperti Enigma (Jerman) dan Turing Bombe (Sekutu) menjadi inti dari komunikasi rahasia militer selama Perang Dunia II.
+
+Enigma (Jerman): Mesin rotor yang dapat menghasilkan sandi yang sangat kompleks dan dianggap tidak dapat dipecahkan.
+
+Pemecahan Enigma: Kriptografer Sekutu di Bletchley Park, Inggris, yang dipimpin oleh Alan Turing, berhasil memecahkan kode Enigma menggunakan logika, matematika, dan cikal bakal komputer modern. Upaya ini disebut-sebut mempercepat akhir Perang Dunia II dan menjadi tonggak penting dalam perkembangan ilmu komputer.
+
+**III. Kriptografi Modern (Era Komputer dan Digital)**
+Sejak paruh kedua abad ke-20, kriptografi bergeser dari teknik linguistik ke matematika murni, seiring dengan munculnya komputer digital.
+
+1. Kriptografi Kunci Simetris Standar (1970-an)
+DES (Data Encryption Standard, 1977): Dikembangkan oleh IBM dan diadopsi oleh Pemerintah AS. DES menjadi standar enkripsi simetris yang dominan. Kriptografi Simetris menggunakan kunci yang sama untuk enkripsi dan dekripsi.
+
+AES (Advanced Encryption Standard, 2001): Standar enkripsi simetris pengganti DES yang lebih kuat dan digunakan secara luas hingga saat ini (misalnya, untuk mengamankan Wi-Fi atau hard drive).
+
+2. Kriptografi Kunci Publik / Asimetris (1976)
+Ini adalah revolusi terbesar dalam sejarah kriptografi sejak Al-Kindi.
+
+Konsep Kunci Publik: Diperkenalkan oleh Whitfield Diffie dan Martin Hellman pada tahun 1976. Konsep ini menggunakan dua kunci yang berbeda: Kunci Publik (untuk enkripsi, dapat disebar ke publik) dan Kunci Privat (untuk dekripsi, harus dirahasiakan). Ini memecahkan masalah distribusi kunci yang merupakan kelemahan utama kriptografi simetris.
+
+Algoritma RSA (Rivest, Shamir, dan Adleman, 1977): Algoritma kunci publik pertama yang dapat digunakan secara praktis dan masih menjadi dasar untuk keamanan internet saat ini (termasuk SSL/TLS).
+
+3. Masa Depan: Kriptografi Kuantum
+Saat ini, penelitian berfokus pada Kriptografi Pasca-Kuantum. Hal ini didorong oleh ancaman teoretis bahwa komputer kuantum di masa depan dapat memecahkan algoritma kunci publik yang ada (seperti RSA) dalam hitungan detik. Tujuannya adalah mengembangkan algoritma baru yang aman dari serangan komputer kuantum dan klasik.
 
 ---
 
-## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+**Konsep Dasar *Confidentiality, Integrity, Availability (CIA)***
+CIA Triad (Tiga Serangkai CIA) adalah model keamanan informasi fundamental yang memandu kebijakan keamanan suatu organisasi. Model ini terdiri dari tiga komponen inti yang sering dianggap sebagai tujuan paling penting dari keamanan informasi.
 
----
+1. **Confidentiality *(Kerahasiaan)***
+Kerahasiaan adalah upaya untuk mencegah pengungkapan informasi kepada pihak yang tidak berwenang. Ini memastikan bahwa data hanya dapat diakses oleh individu, entitas, atau proses yang telah diberi izin.
 
-## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Tujuan Utama: Melindungi data sensitif dari mata-mata atau pengguna yang tidak berwenang.
 
----
+Contoh Penerapan: Menggunakan enkripsi untuk mengacak data; menerapkan kontrol akses (misalnya, username dan password); menggunakan otentikasi dua faktor (2FA).
 
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+Ancaman terhadap Kerahasiaan: Sniffing jaringan, data leakage, atau akses tidak sah.
 
----
+2. **Integrity *(Integritas)***
+Integritas merujuk pada keakuratan dan kelengkapan data. Ini memastikan bahwa data tidak diubah, dihapus, atau dimanipulasi secara tidak sah selama penyimpanan, pemrosesan, atau transmisi.
 
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+Tujuan Utama: Memastikan data dapat dipercaya dan tidak dirusak.
 
----
+Contoh Penerapan: Menggunakan fungsi hashing untuk membuat sidik jari data (data fingerprint); tanda tangan digital untuk memverifikasi keaslian dokumen; kontrol versi (version control).
 
-## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+Ancaman terhadap Integritas: Virus dan malware, kesalahan saat transmisi, atau perubahan data yang disengaja oleh hacker.
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+3. **Availability *(Ketersediaan)***
+Ketersediaan adalah jaminan bahwa sistem dan data dapat diakses dan digunakan oleh pengguna yang sah ketika mereka membutuhkannya. Hal ini berkaitan dengan fungsionalitas sistem dan kemampuan pengguna untuk mengakses sumber daya.
 
----
+Tujuan Utama: Memastikan akses yang andal dan tepat waktu terhadap sistem.
 
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+Contoh Penerapan: Redundancy (memiliki sistem cadangan); Disaster Recovery Plan (DRP); backup data secara teratur; dan pemeliharaan perangkat keras yang baik.
 
-Hasil eksekusi program Caesar Cipher:
+Ancaman terhadap Ketersediaan: Serangan Distributed Denial of Service (DDoS), pemadaman listrik, kegagalan hardware atau software, dan bencana alam.
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+Ketiga elemen ini saling terkait. Keamanan yang kuat harus menyeimbangkan ketiganya; mengabaikan salah satunya akan melemahkan dua elemen lainnya.
 
----
+**Peran Kriptografi dalam Kehidupan Sehari-hari**
+Kriptografi adalah praktik dan studi tentang teknik komunikasi yang aman di hadapan pihak ketiga (disebut sebagai adversaries). Kriptografi adalah tulang punggung keamanan digital modern dan merupakan mekanisme utama untuk mencapai Confidentiality dan Integrity (serta otentikasi dan non-repudiasi).
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+Berikut adalah peran kunci kriptografi dalam aktivitas sehari-hari:
 
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+1. **Enkripsi Pesan *(Messaging Encryption)***
+Contoh: Enkripsi End-to-End (E2EE) pada WhatsApp, Telegram, atau iMessage.
 
----
+Mekanisme: Kriptografi memastikan Kerahasiaan. Pesan dienkripsi pada perangkat pengirim dan hanya dapat didekripsi pada perangkat penerima. Bahkan penyedia layanan atau hacker yang mencegat pesan tidak dapat membacanya. Ini biasanya menggunakan kombinasi kriptografi simetris dan asimetris.
 
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+2. **Keamanan Transaksi dan Browsing Web *(SSL/TLS)**
+Contoh: Simbol gembok 🔒 di browser Anda saat mengunjungi situs web perbankan atau e-commerce.
 
----
+Mekanisme: Secure Sockets Layer (SSL) dan penerusnya, Transport Layer Security (TLS), menggunakan kriptografi asimetris untuk membangun koneksi yang aman antara browser Anda dan server web.
 
-## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Ini memastikan Kerahasiaan data (informasi login, nomor kartu kredit) yang dikirim melintasi internet.
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
+Ini juga menjamin Integritas data, memastikan bahwa data tidak diubah selama transmisi.
+
+Sertifikat SSL/TLS juga berfungsi sebagai otentikasi (verifikasi identitas server).
+
+3. **Tanda Tangan Digital *(Digital Signature)***
+Contoh: Mengesahkan keaslian software yang diunduh, otorisasi dokumen hukum digital, atau transaksi blockchain.
+
+Mekanisme: Tanda tangan digital menggunakan kriptografi kunci asimetris untuk memverifikasi Integritas dokumen dan otentikasi (identitas pengirim).
+
+Pengirim menggunakan kunci privatnya untuk "menandatangani" hash data.
+
+Penerima menggunakan kunci publik pengirim untuk memverifikasi bahwa hash yang ditandatangani cocok dengan hash dokumen yang diterima, membuktikan bahwa dokumen tersebut tidak diubah dan benar-benar berasal dari pengirim tersebut (Non-Repudiasi).
+
+4. ***Cryptocurrency dan Blockchain***
+Contoh: Bitcoin, Ethereum, dan mata uang digital lainnya.
+
+Mekanisme: Blockchain sangat bergantung pada fungsi hashing kriptografi dan tanda tangan digital.
+
+Hashing memastikan Integritas (setiap blok ditautkan secara kriptografis ke blok sebelumnya, mencegah perubahan data).
+
+Tanda tangan digital digunakan untuk otorisasi transaksi.
