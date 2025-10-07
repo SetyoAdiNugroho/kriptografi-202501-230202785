@@ -27,7 +27,7 @@ Jenis:
 Kunci Simetris: Satu kunci untuk enkripsi dan dekripsi.
 Kunci Asimetris: Pasangan kunci (publik dan privat) yang berbeda.
 
-**Pesan Terenkripsi *(Ciphertext / Teks Sandi) ***
+**Pesan Terenkripsi *(Ciphertext / Teks Sandi)***
 Ini adalah hasil dari proses enkripsi, yaitu pesan asli yang telah diubah menjadi bentuk yang tidak dapat dibaca atau dimengerti tanpa kunci yang benar. Ini adalah data yang ditransmisikan melalui saluran yang tidak aman.
 Contoh: "Xm92nFh8Aop2Bq3Rz7yG" (tergantung pada algoritma yang digunakan).
 
