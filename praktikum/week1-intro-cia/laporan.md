@@ -117,3 +117,74 @@ Mekanisme: Blockchain sangat bergantung pada fungsi hashing kriptografi dan tand
 Hashing memastikan Integritas (setiap blok ditautkan secara kriptografis ke blok sebelumnya, mencegah perubahan data).
 
 Tanda tangan digital digunakan untuk otorisasi transaksi.
+
+---
+
+# QUIS
+**1. Tokoh yang paling sering disebut sebagai Bapak Kriptografi Modern adalah Claude Shannon.**
+
+Mengapa Claude Shannon?
+Claude Shannon, seorang ahli matematika, insinyur listrik, dan kriptografer Amerika, dianggap sebagai pelopor utama karena:
+
+Teori Komunikasi: Ia meletakkan dasar teoritis yang kuat untuk kriptografi dalam makalahnya yang revolusioner tahun 1948, "A Mathematical Theory of Communication" (Teori Matematis Komunikasi). Meskipun makalah ini lebih luas tentang teori informasi, konsep-konsep di dalamnya sangat mendasar bagi keamanan dan perancangan sistem kriptografi.
+
+Analisis Kriptografi: Sebelumnya, ia menerbitkan makalah yang tidak dirahasiakan, "Communication Theory of Secrecy Systems" (Teori Komunikasi Sistem Kerahasiaan) pada tahun 1949, yang secara formal memperkenalkan dan mendefinisikan konsep penting seperti diffusion (penyebaran) dan confusion (kebingungan)—dua properti kunci yang harus dimiliki oleh cipher yang aman untuk menahan serangan analisis frekuensi dan metode lainnya.
+
+Kontribusi Shannon mengubah kriptografi dari seni yang didasarkan pada trik dan aturan menjadi ilmu pengetahuan yang didasarkan pada prinsip-prinsip matematika yang ketat.
+
+**2. Algoritma kunci publik (asimetris) yang populer dan paling banyak digunakan saat ini adalah RSA dan Elliptic Curve Cryptography (ECC), serta algoritma Diffie-Hellman (DH) untuk pertukaran kunci.**
+
+  1. RSA (Rivest–Shamir–Adleman)
+RSA adalah algoritma kunci publik yang paling terkenal dan paling banyak diaplikasikan.
+
+Prinsip Keamanan: Keamanannya didasarkan pada kesulitan komputasi dalam memfaktorkan bilangan bulat yang sangat besar menjadi faktor-faktor bilangan primanya.
+
+Aplikasi: Digunakan secara luas untuk enkripsi/dekripsi, Tanda Tangan Digital, dan dalam protokol keamanan web seperti SSL/TLS.
+
+  2. ECC (Elliptic Curve Cryptography)
+ECC merupakan pesaing utama RSA dan semakin populer digunakan, terutama pada perangkat bergerak.
+
+Prinsip Keamanan: Didukung oleh kesulitan komputasi dalam memecahkan masalah Logaritma Diskrit Kurva Eliptik (Elliptic Curve Discrete Logarithm Problem/ECDLP).
+
+Keunggulan: ECC menawarkan tingkat keamanan yang setara dengan RSA, tetapi dengan ukuran kunci yang jauh lebih kecil. Misalnya, kunci ECC 256-bit setara dengan kunci RSA 3072-bit, sehingga lebih efisien untuk perangkat dengan daya komputasi dan memori terbatas.
+
+Varian Populer:
+
+ECDSA (Elliptic Curve Digital Signature Algorithm): Digunakan untuk Tanda Tangan Digital.
+
+ECDH (Elliptic Curve Diffie-Hellman): Digunakan untuk pertukaran kunci.
+
+  3. Diffie-Hellman (DH)
+Diffie-Hellman adalah algoritma kunci publik pertama yang ditemukan dan sering digunakan untuk satu tujuan utama.
+
+Fungsi Utama: Digunakan secara eksklusif untuk Pertukaran Kunci (Key Exchange). Tujuannya adalah untuk memungkinkan dua pihak yang tidak memiliki informasi rahasia sebelumnya untuk menyepakati (menghasilkan) sebuah kunci simetris bersama secara aman melalui saluran komunikasi yang tidak aman.
+
+Penerapan: Versi modifikasi dan lebih aman, seperti Ephemeral Diffie-Hellman (DHE), sering digunakan dalam protokol web untuk memberikan kerahasiaan ke depan yang sempurna (Perfect Forward Secrecy).
+
+**3. perbedaan utama antara kriptografi klasik dan kriptografi modern dalam format urutan, bukan tabel.**
+
+Kriptografi modern adalah evolusi yang didorong oleh ilmu matematika kompleks dan munculnya komputer digital, jauh lebih aman dan serbaguna dibanding pendahulunya.
+
+  1. Unit Operasi Data
+Kriptografi Klasik: Beroperasi pada level karakter (huruf, angka, simbol) sebagai unit dasar. Contohnya, mengganti atau memindahkan huruf per huruf dalam pesan.
+
+Kriptografi Modern: Beroperasi pada level bit biner (rangkaian 0 dan 1). Seluruh data (pesan, kunci, ciphertext) diolah sebagai blok atau aliran bit.
+
+  2. Landasan dan Kekuatan Keamanan
+Kriptografi Klasik: Keamanannya didasarkan pada kerahasiaan algoritma (security by obscurity) atau teknik yang relatif sederhana (substitusi dan transposisi). Sistem ini rentan dan mudah dipecahkan menggunakan analisis frekuensi atau serangan brute force sederhana.
+
+Kriptografi Modern: Keamanannya didasarkan pada prinsip matematika yang kompleks dan kerahasiaan kunci (sesuai Prinsip Kerckhoffs). Keamanannya terletak pada kesulitan komputasi untuk memecahkan masalah matematika yang mendasarinya (misalnya, faktorisasi bilangan prima besar atau logaritma diskrit).
+
+  3. Jenis Kunci dan Model Komunikasi
+Kriptografi Klasik: Hampir seluruhnya menggunakan model Kunci Simetris (kunci tunggal). Kunci yang sama digunakan untuk enkripsi dan dekripsi, sehingga kunci tersebut harus dibagikan secara rahasia sebelum komunikasi.
+
+Kriptografi Modern: Menggunakan dua model kunci utama:
+
+Kunci Simetris (Modern): Lebih efisien dan kuat daripada versi klasik (contoh: AES).
+
+Kunci Asimetris (Kunci Publik): Memperkenalkan pasangan kunci (publik dan privat) yang berbeda. Model ini merevolusi pertukaran kunci yang aman, autentikasi, dan Tanda Tangan Digital (RSA, ECC).
+
+  4. Tujuan dan Aplikasi
+Kriptografi Klasik: Fokus utamanya adalah pada Kerahasiaan (menyembunyikan pesan agar tidak dibaca oleh musuh) dan terbatas penggunaannya, kebanyakan di bidang militer atau diplomatik.
+
+Kriptografi Modern: Mencakup empat tujuan keamanan utama: Kerahasiaan, Integritas (memastikan data tidak diubah), Autentikasi (memverifikasi identitas), dan Non-Repudiasi (tidak dapat menyangkal tindakan). Aplikasinya merambah ke seluruh aspek digital, seperti perbankan online, SSL/TLS, dan mata uang kripto.
