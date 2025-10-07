@@ -1,14 +1,40 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 2
+Topik: [CRYPTOSYSTEM]  
+Nama: [Setyo Adi Nugroho]  
+NIM: [230202785]  
+Kelas: [5IKKA]  
 
 ---
 
-## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+## 1. Komponen utama dalam sebuah kriptosistem (sistem kriptografi)
+
+lima elemen fundamental yang bekerja sama untuk mengamankan data:
+
+**Komponen Utama Kriptosistem**
+
+**Pesan Asli *(Plaintext / Teks Terbuka)***
+Ini adalah pesan atau data yang dapat dibaca dan dimengerti maknanya. Ini adalah input dari proses enkripsi.
+Contoh: "Rahasia besar perusahaan."
+
+**Algoritma Kriptografi *(Cipher)***
+Ini adalah serangkaian instruksi atau prosedur matematika yang digunakan untuk mengubah pesan asli menjadi pesan terenkripsi (ciphertext), dan sebaliknya.
+Contoh: Algoritma AES, RSA, atau fungsi hashing SHA-256.
+
+**Kunci *(Key)***
+Ini adalah informasi rahasia (bisa berupa angka, kata, atau serangkaian karakter biner) yang digunakan oleh algoritma untuk melakukan enkripsi dan dekripsi. Kekuatan keamanan kriptosistem hampir selalu bergantung pada kerahasiaan dan panjang kunci.
+Jenis:
+Kunci Simetris: Satu kunci untuk enkripsi dan dekripsi.
+Kunci Asimetris: Pasangan kunci (publik dan privat) yang berbeda.
+
+**Pesan Terenkripsi *(Ciphertext / Teks Sandi) ***
+Ini adalah hasil dari proses enkripsi, yaitu pesan asli yang telah diubah menjadi bentuk yang tidak dapat dibaca atau dimengerti tanpa kunci yang benar. Ini adalah data yang ditransmisikan melalui saluran yang tidak aman.
+Contoh: "Xm92nFh8Aop2Bq3Rz7yG" (tergantung pada algoritma yang digunakan).
+
+**Prosedur Enkripsi dan Dekripsi**
+Ini adalah dua proses fungsional yang menggunakan algoritma dan kunci:
+Enkripsi: Proses mengubah plaintext menjadi ciphertext.
+Dekripsi: Proses mengubah ciphertext kembali menjadi plaintext (hanya dapat dilakukan oleh penerima yang sah dengan kunci yang benar).
 
 ---
 
