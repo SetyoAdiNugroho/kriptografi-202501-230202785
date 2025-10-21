@@ -1,28 +1,28 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Topik: Modular-Math  
+Nama: Setyo Adi Nugroho 
+NIM: 230202785  
+Kelas: 5IKKA 
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+1. Menyelesaikan operasi aritmetika modular.
+2. Menentukan bilangan prima dan menghitung GCD (Greatest Common Divisor).
+3. Menerapkan logaritma diskrit sederhana dalam simulasi kriptografi.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Modular Math adalah sistem aritmetika untuk bilangan bulat di mana bilangan "berputar" atau berulang setelah mencapai nilai tertentu yang disebut modulus. Cara kerjanya mirip dengan jam, di mana setelah pukul 12, waktu kembali ke pukul 1. Konsep ini berfokus pada sisa pembagian dan memiliki aplikasi luas dalam bidang seperti kriptografi dan ilmu komputer. 
 
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+- Python 3.x  
+- Visual Studio Code 
+- Git dan akun GitHub
 
 ---
 
@@ -65,9 +65,32 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+- Pertanyaan 1: Aritmetika modular (Modular Math) adalah fondasi matematis yang krusial dalam kriptografi modern. Perannya sangat penting untuk memastikan keamanan, kerahasiaan, dan integritas data.
+  beberapa peran utama aritmetika modular dalam kriptografi modern:
+  1. Mendukung algoritma kunci publik
+  2. Memfasilitasi fungsi hash
+  3. Menciptakan kurva eliptik
+  4. Memungkinkan kriptografi kunci simetris
+  5. Mengatur operasi dalam cakupan yang terbatas
+  6. Menjadi dasar untuk tanda tangan digital
+- Pertanyaan 2: Invers modular sangat penting dalam algoritma kunci publik seperti RSA karena menjadi jembatan matematis yang memungkinkan proses dekripsi. Tanpa invers modular, enkripsi akan bersifat satu arah dan pesan yang sudah dienkripsi tidak akan bisa dikembalikan ke bentuk aslinya.
+- Pertanyaan 3: Tantangan utama dalam menyelesaikan logaritma diskrit untuk modulus besar adalah :
+  1. Kompleksitas komputasi eksponensial
+     Waktu pemrosesan: Algoritma yang paling efektif untuk memecahkan logaritma diskrit berjalan dalam waktu eksponensial terhadap panjang modulus dalam bit.
+     Ukuran modulus: Dalam kriptografi, ukuran modulus dipilih sedemikian rupa sehingga masalah logaritma diskrit menjadi tidak dapat dipecahkan dalam rentang waktu yang wajar.
+  2. Kurangnya algoritma efisien
+     Algoritma yang ada: Beberapa algoritma yang dikenal untuk memecahkan masalah logaritma diskrit adalah algoritma "Baby-step, giant-step" dan algoritma "Pollard's Rho". Meskipun lebih cepat daripada metode pencarian brute-force, algoritma ini tetap intensif secara komputasi dan tidak dapat digunakan untuk modulus besar.
+     Saringan medan bilangan (Number Field Sieve/NFS): NFS adalah algoritma paling efisien yang ada saat ini untuk menyelesaikan logaritma diskrit dalam bidang hingga (\(Z_{p}^{*}\)). Namun, NFS juga sangat intensif secara komputasi dan memerlukan sumber daya yang besar untuk modulus besar.
+  3. Tidak adanya pola yang jelas
+     Perilaku logaritma: Tidak seperti logaritma dalam matematika biasa yang berperilaku terus-menerus dan teratur, logaritma diskrit berperilaku tidak menentu dan tidak dapat diprediksi. Karena tidak ada pola yang jelas, tidak ada metode pintas yang dapat digunakan untuk menyelesaikannya secara efisien.
+     Fungsi satu arah: Fenomena ini menjadikannya "fungsi satu arah", yang mudah untuk dihitung ke satu arah (eksponensiasi modular), tetapi hampir tidak mungkin untuk dibalik ke arah lain (logaritma diskrit) tanpa kunci yang tepat.
+  4. Kerentanan terhadap komputasi kuantum
+     Komputer kuantum: Meskipun algoritma klasik tidak dapat menyelesaikan masalah logaritma diskrit dalam waktu polinomial, komputer kuantum berpotensi mengubah lanskap keamanan. Algoritma Shor, misalnya, dapat menyelesaikan masalah ini secara efisien pada komputer kuantum.
+     Ancaman masa depan: Kemunculan komputer kuantum yang kuat menjadi ancaman besar bagi kriptografi berbasis logaritma diskrit. Hal ini mendorong penelitian kriptografi pasca-kuantum untuk menemukan metode enkripsi baru yang tahan terhadap serangan kuantum.
+  5. Keterbatasan kelompok yang dipilih dengan buruk
+     Pemilihan grup yang hati-hati: Keamanan sistem kriptografi yang menggunakan logaritma diskrit bergantung pada pemilihan grup yang cermat.
+     Pengecualian khusus: Beberapa grup memiliki struktur matematika yang memungkinkan logaritma diskrit dihitung dengan mudah. Dalam kasus seperti ini, masalahnya tidak lagi sulit, dan kriptografi yang dibangun di atasnya akan rentan. 
+    
 ---
 
 ## 8. Kesimpulan
@@ -75,21 +98,4 @@ Hasil eksekusi program Caesar Cipher:
 
 ---
 
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
-
-## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
-
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
