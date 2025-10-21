@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 3
 Topik: Modular-Math  
 Nama: Setyo Adi Nugroho 
 NIM: 230202785  
