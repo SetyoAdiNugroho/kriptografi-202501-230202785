@@ -36,30 +36,30 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+# from math import isqrt
+import random
+
+# ======== Bagian Fungsi Dasar ========
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return abs(a)
+
+def egcd(a, b):
+    if b == 0:
+        return (a, 1, 0)
+    else:
+        g, x1, y1 = egcd(b, a % b)
+        return (g, y1, x1 - (a // b) * y1)
 ```
 )
 
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
 
 ---
 
