@@ -41,15 +41,20 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+# import math
+from typing import Iterable, Tuple
+
+ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ALPHABET_SIZE = len(ALPHABET)  # 26
+
+# ---------------- Core crypto-metrics ----------------
+
+def entropy_bits_from_keyspace(keyspace_size: int) -> float:
+    if keyspace_size <= 0:
+        raise ValueError("keyspace_size harus > 0")
+    return math.log2(keyspace_size)
 ```
-)
 
 ---
 
