@@ -1,14 +1,18 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 7
+Topik: Diffie Hellman  
+Nama: Setyo Adi Nugroho  
+NIM: 230202785
+Kelas: 5 IKKA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+
+Melakukan simulasi protokol Diffie-Hellman untuk pertukaran kunci publik.
+Menjelaskan mekanisme pertukaran kunci rahasia menggunakan bilangan prima dan logaritma diskrit.
+Menganalisis potensi serangan pada protokol Diffie-Hellman (termasuk serangan Man-in-the-Middle / MITM).
 
 ---
 
@@ -19,10 +23,9 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+- Python 3.x  
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
 ---
 
@@ -36,13 +39,17 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+#import random
+
+# parameter umum (disepakati publik)
+p = 23  # bilangan prima
+g = 5   # generator
+
+# private key masing-masing pihak
+a = random.randint(1, p-1)  # secret Alice
+b = random.randint(1, p-1)  # secret Bob
 ```
 )
 
@@ -64,10 +71,11 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+  
+- Pertanyaan 1: Diffie Hellman memungkinkan pertukaran kunci di saluran publik karena dia didasarkan pada masalah matematika yang sulit untuk diselesaikan tanpa informasi rahasia yang tepat.
+- Pertanyaan 2: Kelemahan utama protokol Diffie Hellman murni adalah kerentanannya terhadap serangan Man-in-the-Middle (MITM) karena protokol ini tidak menyediakan autentikasi. Dengan tidak adanya cara untuk memverifikasi siapa pemilik kunci publik yang mereka terima ini memungkinkan serangan MITM.
+- Pertanyaan 3: Untuk mencegah serangan Man-in-the-Middle (MITM) pada protokol Diffie Hellman adalah dengan melengkapinya dengan mekanisme autentikasi.
+
 ---
 
 ## 8. Kesimpulan
