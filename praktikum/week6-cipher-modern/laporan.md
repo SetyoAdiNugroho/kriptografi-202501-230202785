@@ -1,15 +1,18 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 6  
+Topik: Cipher Modern  
+Nama: Setyo Adi Nugroho  
+NIM: 230202785
+Kelas: 5 IKKA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
+Mengimplementasikan algoritma DES untuk blok data sederhana.
+Menerapkan algoritma AES dengan panjang kunci 128 bit.
+Menjelaskan proses pembangkitan kunci publik dan privat pada algoritma RSA.
 ---
 
 ## 2. Dasar Teori
@@ -19,10 +22,9 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+- Python 3.x  
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
 ---
 
@@ -36,13 +38,17 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+# from Crypto.Cipher import DES
+from Crypto.Random import get_random_bytes
+
+key = get_random_bytes(8)  # kunci 64 bit (8 byte)
+cipher = DES.new(key, DES.MODE_ECB)
+
+plaintext = b"ABCDEFGH"
+ciphertext = cipher.encrypt(plaintext)
+print("Ciphertext:", ciphertext)
 ```
 )
 
@@ -64,10 +70,11 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+
+- Pertanyaan 1: Perbedaan yang paling mendasar antara DES, AES, dan RSA adalah pada jenis kriptografi yang mereka gunakan yaitu mekanisme kunci dan tingkat keamanan yang dihasilkan. Pada DES dan AES adalah algoritma kriptografi simetris (menggunakan satu kunci rahasia untuk enkripsi dan dekripsi), sementara RSA adalah algoritma kriptografi asimetris atau kunci publik (menggunakan sepasang kunci, publik dan privat). 
+- Pertanyaan 2: AES jauh lebih banyak digunakandibandingkan dengan DES dikarenakan beebrapa faktor yaitu keamanan superior, panjang kunci yang lebih besar, dan efisiensi yang lebih baik. DES memiliki kelemahan keamanan fatal yang disebabkan oleh panjang kuncinya yang pendek. Sedangkan pada AES menawarkan keamanan yang tak tertandingi dengan kunci yang jauh lebih panjang, sekaligus memberikan kecepatan pemrosesan yang superior, menjadikannya pilihan ideal untuk tuntutan data dan keamanan di era digital. Oleh karena itu DES dianggap usang karenakan tidak lagi aman terhadap serangan komputasi modern.
+- Pertanyaan 3: RSA dikategorikan sebagai algoritma kriptografi asimetris atau kunci publik karena dia menggunakan dua kunci yang berbeda dan saling terkait secara matematis untuk proses enkripsi dan dekripsi yaitu Kunci Publik dan Kunci Privat.
+Berbeda dengan kriptografi simetris (seperti AES) yang menggunakan satu kunci yang sama, dalam RSA kunci untuk enkripsi dapat diumumkan secara bebas, sementara kunci untuk dekripsi harus dijaga kerahasiaannya.
 ---
 
 ## 8. Kesimpulan
