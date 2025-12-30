@@ -1,14 +1,18 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Topik:  Public Key Infrastructure 
+Nama: Setyo Adi Nugroho 
+NIM: 230202785
+Kelas: 5 IKKA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
+
+Membuat sertifikat digital sederhana.
+Menjelaskan peran Certificate Authority (CA) dalam sistem PKI.
+Mengevaluasi fungsi PKI dalam komunikasi aman (contoh: HTTPS, TLS).
 
 ---
 
@@ -19,10 +23,9 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
+- Python 3.x  
+- Visual Studio Code
 - Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
 ---
 
@@ -64,10 +67,10 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+
+- Pertanyaan 1: Certificate Authority (CA) bertindak seperti "Kantor Imigrasi" digital yaitu berfungsi untuk memverifikasi identitas sebuah entitas (seperti situs web, perangkat, atau individu) dan menerbitkan sertifikat digital untuk membuktikan identitas tersebut. Tanpa CA, kita tidak akan pernah tahu apakah situs web yang kita buka benar-benar asli atau hanya halaman palsu yang mencoba mencuri data kita.
+- Pertanyaan 2: Self-signed certificate tidak cukup untuk sistem produksi karena tidak ada pihak ketiga yang memvalidasi bahwa "Anda adalah Anda" dan siapa pun, termasuk penyerang, bisa membuat sertifikat palsu atas nama domain anda. Kemudian karena browser tidak bisa memverifikasi keaslian sertifikat, penyerang bisa mencegat koneksi dan menyisipkan sertifikat self-signed milik mereka sendiri.
+- Pertanyaan 3: Public Key Infrastructure (PKI) mencegah serangan Man-in-the-Middle (MITM) bukan hanya melalui enkripsi, tetapi yang paling krusial adalah melalui otentikasi. Tanpa PKI, anda mungkin berkomunikasi secara terenkripsi, tetapi anda tidak tahu dengan siapa Anda berbicara. PKI memastikan bahwa kunci publik yang anda gunakan benar-benar milik server tujuan, bukan milik penyerang. 
 ---
 
 ## 8. Kesimpulan
