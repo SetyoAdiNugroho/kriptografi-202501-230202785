@@ -39,17 +39,21 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+import hashlib
+import time
 
----
+class Block:
+    def __init__(self, index, previous_hash, data, timestamp=None):
+        self.index = index
+        self.timestamp = timestamp or time.time()
+        self.data = data
+        self.previous_hash = previous_hash
+        self.nonce = 0
+        self.hash = self.calculate_hash()
+
+```
 
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
