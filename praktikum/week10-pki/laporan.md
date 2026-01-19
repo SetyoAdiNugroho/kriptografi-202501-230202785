@@ -42,14 +42,20 @@ Contoh format:
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
 ```
-)
+from cryptography import x509 # type: ignore
+from cryptography.x509.oid import NameOID # type: ignore
+from cryptography.hazmat.primitives import hashes, serialization # type: ignore
+from cryptography.hazmat.primitives.asymmetric import rsa # type: ignore
+from cryptography.hazmat.backends import default_backend # type: ignore
+from datetime import datetime, timedelta, timezone
 
----
+# Generate key pair
+key = rsa.generate_private_key(
+    public_exponent=65537,
+    key_size=2048,
+    backend=default_backend()
+```
 
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
