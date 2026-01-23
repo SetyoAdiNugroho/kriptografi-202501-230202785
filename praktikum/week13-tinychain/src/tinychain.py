@@ -42,3 +42,4 @@ my_chain.add_block(Block(1, "", "Transaksi A → B: 10 Coin"))
 
 print("Mining block 2...")
 my_chain.add_block(Block(2, "", "Transaksi B → C: 5 Coin"))
+
